@@ -13,8 +13,8 @@ export default function Home() {
       <Head> 
         <meta property="og:title" content={title}/>
         <meta property="fc:frame" content="vNext"/>
-        <meta property="fc:frame: image" content={frameImgUrl}/>
-        <meta property="fc:frame:image:aspect_ratio" content="1:1"/>
+        <meta name="fc:frame: image" content={frameImgUrl}/>
+        <meta name="fc:frame:image:aspect_ratio" content="1:1"/>
         <meta property="fc: frame:button:1" content="Mint"/>
         <meta property="fc:frame:button:1:action" content="tx"/>
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/degen/get-tx-frame`} />
