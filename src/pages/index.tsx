@@ -13,7 +13,7 @@ export default function Home() {
       <Head> 
         <meta property="og:title" content={title}/>
         <meta property="fc:frame" content="vNext"/>
-        <meta name="fc:frame: image" content={frameImgUrl}/>
+        <meta name="fc:frame:image" content={frameImgUrl}/>
         <meta name="fc:frame:image:aspect_ratio" content="1:1"/>
         <meta property="fc: frame:button:1" content="Mint"/>
         <meta property="fc:frame:button:1:action" content="tx"/>
