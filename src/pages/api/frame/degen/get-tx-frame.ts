@@ -1,7 +1,7 @@
-import { NextApiRequest } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
 import { CoinbaseKit } from "../../../../../classes/CoinbaseKit";
 import { getERC721PreparedEncodedData, getFarcasterAccountAddress } from "../../../../../utils/tx-frame";
-import { FrameRequest } from "@coinbase/onchainkit/core";
+import { FrameRequest } from "@coinbase/onchainkit/frame";
 import { ChainId } from "@thirdweb-dev/sdk";
 import { sendTransaction } from "thirdweb";
 import { erc721ContractABI } from "../../../../../utils/erc721ContractABI";
@@ -9,7 +9,7 @@ import { erc721ContractAddress } from "../../../../../utils/constants";
 
 export default async function handler(
     req: NextApiRequest,
-    res: NextApiRequest,
+    res: NextApiResponse,
 ) {
     if(req.method !=="POST"){
         return res.status(405).json({error: "Method Not Allowed"});
@@ -26,7 +26,7 @@ export default async function handler(
 
      return res.status(200).json({
         ChainId: "eip155:666666666",
-        method: "eth_sendTransaction",
+        method: "degen_sendTransaction",
         params:{
             abi: erc721ContractABI,
             to:  erc721ContractAddress,

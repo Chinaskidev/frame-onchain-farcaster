@@ -1,4 +1,4 @@
-import  { FrameRequest, getFrameMessage } from "@coinbase/onchainkit";
+ import  { FrameRequest, getFrameMessage } from "@coinbase/onchainkit/frame";
 
 export class CoinbaseKit{
     public static validateMessage = async (body: FrameRequest) =>{
@@ -10,7 +10,7 @@ export class CoinbaseKit{
             }
 
 
-        );
+      );
         return { isValid, message};
     }
 }
