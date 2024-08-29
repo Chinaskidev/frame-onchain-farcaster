@@ -5,8 +5,8 @@ import { FrameMetadata } from '@coinbase/onchainkit/frame';
 const HOST_URL = process.env.NEXT_PUBLIC_HOST_URL;
 
 // Definir el título y la URL de la imagen
-const title = "Amanita Mutation";
-const frameImgUrl = `${HOST_URL}/regenmutation.png`;
+const title = "Monstrous Volcanoes";
+const frameImgUrl = `${HOST_URL}/siavrmonsterletras.png`;
 // Mostrar en la consola el valor de la URL generada para asegurarte de que es válida
 console.log("HOST_URL:", HOST_URL);
 console.log("frameImgUrl:", frameImgUrl);
