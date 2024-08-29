@@ -5,8 +5,7 @@ const HOST_URL = process.env.NEXT_PUBLIC_HOST_URL;
 
 // Definir el título y la URL de la imagen
 const title = "Amanita Mutation";
-const frameImgUrl = "regenmutation.png"; // URL relativa
-
+const frameImgUrl = `${HOST_URL}/regenmutation.png`;
 // Mostrar en la consola el valor de la URL generada para asegurarte de que es válida
 console.log("HOST_URL:", HOST_URL);
 console.log("frameImgUrl:", frameImgUrl);
