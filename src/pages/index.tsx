@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <>
       <Head> 
-        <meta property="og:title" content={title} />
-        <meta property="fc:frame" content="vNext" />
+        <meta name="og:title" content={title} />
+        <meta name="fc:frame" content="vNext" />
         <meta name="fc:frame:image" content={frameImgUrl} />
         <meta name="fc:frame:image:aspect_ratio" content="1:1" />
-        <meta property="fc:frame:button:1" content="Mint" />
-        <meta property="fc:frame:button:1:action" content="tx" />
-        <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/degen/get-tx-frame`} />
+        <meta name="fc:frame:button:1" content="Mint" />
+        <meta name="fc:frame:button:1:action" content="tx" />
+        <meta name="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/degen/get-tx-frame`} />
       </Head>
 
       <h1>Amanita Mutation</h1>
