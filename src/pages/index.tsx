@@ -17,8 +17,8 @@ export default function Home() {
         <meta property="og:title" content={title} />
         <meta property="fc:frame" content="vNext" />
         {/* Asegúrate de que el valor de "fc:frame:image" sea correcto */}
-        <meta name="fc:frame:image" content={frameImgUrl} />
-        <meta name="fc:frame:image:aspect_ratio" content="1:1" />
+        <meta property="fc:frame:image" content={frameImgUrl} />
+        <meta property="fc:frame:image:aspect_ratio" content="1:1" />
         <meta property="fc:frame:button:1" content="Mint" />
         <meta property="fc:frame:button:1:action" content="tx" />
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/degen/get-tx-frame`} />
@@ -29,3 +29,4 @@ export default function Home() {
     </>
   );
 }
+
