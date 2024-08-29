@@ -1,11 +1,12 @@
 import Head from "next/head";
+import { FrameMetadata } from '@coinbase/onchainkit/frame'; 
 
 // Definir la URL del host a partir de la variable de entorno
 const HOST_URL = process.env.NEXT_PUBLIC_HOST_URL;
 
 // Definir el título y la URL de la imagen
 const title = "Amanita Mutation";
-const frameImgUrl = `${HOST_URL}/regenmutation.png`;
+const frameImgUrl = `${HOST_URL}/colobo.png`;
 // Mostrar en la consola el valor de la URL generada para asegurarte de que es válida
 console.log("HOST_URL:", HOST_URL);
 console.log("frameImgUrl:", frameImgUrl);
