@@ -24,7 +24,7 @@ export default function Home() {
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
       </Head>
 
-      <h1>Amanita Mutation</h1>
+      <h1>Monstrous Volcanoes</h1>
       
     </>
   );
