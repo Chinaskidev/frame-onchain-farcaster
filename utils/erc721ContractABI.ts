@@ -1,4 +1,4 @@
-export const erc721ContractABI=[
+ export const erc721ContractABI = [
   {
     "inputs": [],
     "stateMutability": "nonpayable",
@@ -1764,4 +1764,4 @@ export const erc721ContractABI=[
     "stateMutability": "view",
     "type": "function"
   }
-] as const
+] as const; 
