@@ -20,6 +20,7 @@ export const getERC721PreparedEncodedData = async(
         quantity: BigInt(1),
     });
 
+    
     const encodedData= encode(tx);
     return encodedData;
 };
