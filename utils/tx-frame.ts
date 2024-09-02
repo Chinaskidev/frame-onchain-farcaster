@@ -25,7 +25,7 @@ export const getERC721PreparedEncodedData = async(
     return encodedData;
 };
 
-export const getFarcasterAccountAddress= async(
+export const getFarcasterAccountAddress=(
     interactor: FrameValidationData['interactor'],
 ) =>{
     return interactor.verified_accounts[0] ?? interactor.custody_address;
