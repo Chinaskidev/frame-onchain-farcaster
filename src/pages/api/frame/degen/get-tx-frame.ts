@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { CoinbaseKit } from "../../../../../classes/CoinbaseKit";
-import { getERC721PreparedEncodedData, getFarcasterAccountAddress } from "../../../../../utils/tx-frame";
-import { FrameRequest } from "@coinbase/onchainkit/frame";
-import { erc721ContractABI } from "../../../../../utils/erc721ContractABI";
-import { erc721ContractAddress } from "../../../../../utils/constants";
+import { NextApiRequest, NextApiResponse } from 'next';
+import { CoinbaseKit } from '../../../../../classes/CoinbaseKit';
+import { getERC721PreparedEncodedData, getFarcasterAccountAddress } from '../../../../../utils/tx-frame';
+import { FrameRequest } from '@coinbase/onchainkit/frame';
+import { erc721ContractABI } from '../../../../../utils/erc721ContractABI';
+import { erc721ContractAddress } from '../../../../../utils/constants';
 
 export default async function handler(
   req: NextApiRequest,

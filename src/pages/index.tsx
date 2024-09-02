@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from 'next/head';
 import { FrameMetadata } from '@coinbase/onchainkit/frame'; 
 
 // Definir la URL del host a partir de la variable de entorno
