@@ -1,4 +1,5 @@
- export const erc721ContractABI = [
+export const erc721ContractABI = 
+[
   {
     "inputs": [],
     "stateMutability": "nonpayable",
