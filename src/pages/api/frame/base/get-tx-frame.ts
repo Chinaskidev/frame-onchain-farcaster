@@ -33,7 +33,7 @@ export default async function handler(
         abi: erc721ContractABI,
         to: erc721ContractAddress,
         data: data,
-        value: "1130000000000000", // Asegúrate de que el valor sea correcto y esté en wei
+        value: "0", // Asegúrate de que el valor sea correcto y esté en wei
       },
     });
   } catch (error) {
