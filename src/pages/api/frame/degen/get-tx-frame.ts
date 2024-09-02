@@ -2,7 +2,6 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { CoinbaseKit } from "../../../../../classes/CoinbaseKit";
 import { getERC721PreparedEncodedData, getFarcasterAccountAddress } from "../../../../../utils/tx-frame";
 import { FrameRequest } from "@coinbase/onchainkit/frame";
-import { ChainId } from "@thirdweb-dev/sdk";
 import { erc721ContractABI } from "../../../../../utils/erc721ContractABI";
 import { erc721ContractAddress } from "../../../../../utils/constants";
 
@@ -28,13 +27,13 @@ export default async function handler(
 
     return res.status(200).json({
       ChainId: "eip155:666666666",
-      method: "degen_sendTransaction",
+      method: "eth_sendTransaction",
       params: {
         abi: erc721ContractABI,
         to: erc721ContractAddress,
         data: data,
-        value: "0", // Asegúrate de que el valor sea correcto y esté en wei
-      },
+        value: "0"// Asegúrate de que el valor sea correcto y esté en wei
+      }
     });
   } catch (error) {
     console.error("Error handling request:", error);
