@@ -3,36 +3,41 @@ import { CoinbaseKit } from "../../../../../classes/CoinbaseKit";
 import { getERC721PreparedEncodedData, getFarcasterAccountAddress } from "../../../../../utils/tx-frame";
 import { FrameRequest } from "@coinbase/onchainkit/frame";
 import { ChainId } from "@thirdweb-dev/sdk";
-import { sendTransaction } from "thirdweb";
 import { erc721ContractABI } from "../../../../../utils/erc721ContractABI";
 import { erc721ContractAddress } from "../../../../../utils/constants";
 
 export default async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse,
+  req: NextApiRequest,
+  res: NextApiResponse,
 ) {
-    if(req.method !=="POST"){
-        return res.status(405).json({error: "Method Not Allowed"});
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method Not Allowed" });
+  }
+
+  try {
+    const { isValid, message } = await CoinbaseKit.validateMessage(
+      req.body as FrameRequest
+    );
+
+    if (!isValid || !message) {
+      return res.status(400).json({ error: "Invalid Request" });
     }
-     const { isValid, message} = await CoinbaseKit.validateMessage(
-        req.body as FrameRequest
-     );
-     if (!isValid || !message) {
-        return res.status(400).json({ error: "Invalid Request"});
-     }
 
-     const accountAddress= await getFarcasterAccountAddress(message.interactor);
-     const data = await getERC721PreparedEncodedData(accountAddress);
+    const accountAddress = await getFarcasterAccountAddress(message.interactor);
+    const data = await getERC721PreparedEncodedData(accountAddress);
 
-     return res.status(200).json({
-        ChainId: "eip155:8453",
-        method: "eth_sendTransaction",
-        params:{
-            abi: erc721ContractABI,
-            to:  erc721ContractAddress,
-            data: data,
-            value: "0.00113"
-
-        }
-     })
-};
+    return res.status(200).json({
+      ChainId: "eip155:8453",
+      method: "eth_sendTransaction",
+      params: {
+        abi: erc721ContractABI,
+        to: erc721ContractAddress,
+        data: data,
+        value: "1130000000000000", // Asegúrate de que el valor sea correcto y esté en wei
+      },
+    });
+  } catch (error) {
+    console.error("Error handling request:", error);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
+}
