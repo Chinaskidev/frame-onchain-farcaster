@@ -28,7 +28,7 @@ export default async function handler(
 
     return res.status(200).json({
       ChainId: "eip155:666666666",
-      method: "eth_sendTransaction",
+      method: "degen_sendTransaction",
       params: {
         abi: erc721ContractABI,
         to: erc721ContractAddress,
