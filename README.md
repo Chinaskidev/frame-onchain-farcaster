@@ -1,40 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# frame-onchain-farcaster en la Blockchain de DEGEN
 
-## Getting Started
+**El frame-onchain-farcaster** es una aplicación innovadora que permite a los usuarios reclamar NFTs directamente desde un Farcaster Frame. Este repositorio contiene todo el código necesario e instrucciones para poner en marcha la aplicación.
 
-First, run the development server:
+## Comenzando
+
+Para utilizar el **frame-onchain-farcaster**, sigue los siguientes pasos:
+
+### Clonando el Repositorio
+
+Primero, clona el repositorio en tu máquina local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Chinaskidev/frame-onchain-farcaster.git
+cd amanitaframe
+```
+## Instalando Dependencias
+Esta aplicación requiere varias dependencias, como 
+```thirdweb y OnchainKit de Coinbase. Instálalas usando npm o yarn ```
+```
+npm install
+```
+o 
+
+```
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Despliegue con Vercel
+Para desplegar el Farcaster Transaction Frame, recomendamos usar Vercel. Si aún no lo has hecho, regístrate en Vercel e instala la CLI de Vercel:
+```
+npm i -g vercel
+```
+Luego, dentro del directorio de tu proyecto, ejecuta:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+vercel
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+Sigue las indicaciones para configurar y desplegar tu proyecto.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Configurando Variables de Entorno
+Vercel requiere variables de entorno específicas para que el frame-onchain-farcaster funcione correctamente. Estas incluyen:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- ```TW_SECRET_KEY:``` Clave secreta de la API de thirdweb.
+- ```CONTRACT_ADDRESS:``` La dirección del contrato para el NFT.
+- ```NEXT_PUBLIC_HOST_URL:``` La URL de tu aplicación desplegada.
+- ```NEYMAR_API_KEY (opcional):``` Tu clave API de Neymar, si decides usarla. <br> <br>
+Para agregar estas variables en Vercel, ve a la configuración de tu proyecto en el panel de Vercel, busca la sección de Variables de Entorno y agrega las variables mencionadas anteriormente.
 
-## Learn More
+# Pasos Finales
+Una vez que tus variables de entorno estén configuradas, ¡tu aplicación estará lista para funcionar!
 
-To learn more about Next.js, take a look at the following resources:
+Puedes probar tu Frame usando el [Validador de Frames de Farcaster.](https://warpcast.com/~/developers/frames?url=https%3A%2F%2Ffc-polls.vercel.app%2Fpolls%2F054aee65-c63d-46c1-a1f9-a05b747860f6)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
