@@ -19,15 +19,19 @@ export default function Home() {
         <meta name="fc:frame" content="vNext" />
         <meta name="fc:frame:image" content={frameImgUrl} />
         <meta name="fc:frame:image:aspect_ratio" content="1:1" />
+        
+        {/* Primer botón para iniciar */}
         <meta property="fc:frame:button:1" content="Start" />
-        <meta property="fc:frame:button:1:action" content="Start" />
-        <meta property="fc:frame:button:2:" content="Mint"/>
+        <meta property="fc:frame:button:1:action" content="link" />
+        <meta property="fc:frame:button:1:target" content={`${HOST_URL}/second-frame`} />
+        
+        {/* Segundo botón para mintear */}
+        <meta property="fc:frame:button:2" content="Mint" />
+        <meta property="fc:frame:button:2:action" content="post" />
         <meta property="fc:frame:button:2:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
       </Head>
 
       <h1>Sivar Volcano</h1>
-      
     </>
   );
 }
-
