@@ -22,7 +22,7 @@ export default function Home() {
         <meta property="fc:frame:button:1" content="Start" />
         <meta property="fc:frame:button:1:action" content="Start" />
         <meta property="fc:frame:button:2:" content="Mint"/>
-        <meta property="fc:frame:button:2:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
+        <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
       </Head>
 
       <h1>Sivar Volcano</h1>
