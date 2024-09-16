@@ -21,7 +21,7 @@ export default function Home() {
         <meta name="fc:frame:image:aspect_ratio" content="1:1" />
         
         {/* Primer botón para iniciar */}
-        <meta property="fc:frame:button:1" content="Start" />
+        <meta property="fc:frame:button:1" content="Next" />
         <meta property="fc:frame:button:1:action" content="link" />
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/second-frame`} />
       </Head>
