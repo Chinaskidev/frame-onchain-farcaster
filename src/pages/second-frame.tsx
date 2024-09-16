@@ -3,7 +3,7 @@ import Head from 'next/head';
 const HOST_URL = process.env.NEXT_PUBLIC_HOST_URL;
 
 const title = "Sivar Volcano";
-const secondFrameImgUrl = `${HOST_URL}/sivavolcano.png`;
+const secondFrameImgUrl =`${HOST_URL}sivavolcano.png`;
 
 export default function SecondFrame() {
   return (
@@ -18,9 +18,6 @@ export default function SecondFrame() {
         <meta property="fc:frame:button:1:action" content="post" />
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
       </Head>
-
-      <h1>Mint your Frame</h1>
-      <p>Click "Mint".</p>
     </>
   );
 }
