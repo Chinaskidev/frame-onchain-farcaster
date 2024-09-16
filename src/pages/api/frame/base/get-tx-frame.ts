@@ -26,13 +26,13 @@ export default async function handler(
     const data = await getERC721PreparedEncodedData(accountAddress);
 
     return res.status(200).json({
-      chainId: "eip155:666666666",
+      chainId: "eip155:8453",
       method: "eth_sendTransaction",
       params: {
           abi: erc721ContractABI,
           to: erc721ContractAddress,
           data: data,
-          value: "0"
+          value: "1000000000000000"
       }
     });
   } catch (error) {
