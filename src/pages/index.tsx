@@ -15,15 +15,15 @@ export default function Home() {
   return (
     <>
       <Head> 
-        <meta name="og:title" content={title} />
-        <meta name="fc:frame" content="vNext" />
-        <meta name="fc:frame:image" content={frameImgUrl} />
-        <meta name="fc:frame:image:aspect_ratio" content="1:1" />
+        <meta name="og:title" content={title}/>
+        <meta name="fc:frame" content="vNext"/>
+        <meta name="fc:frame:image" content={frameImgUrl}/>
+        <meta name="fc:frame:image:aspect_ratio" content="1:1"/>
         
         {/* Primer botón para iniciar */}
         <meta property="fc:frame:button:1" content="Next" />
-        <meta property="fc:frame:button:1:action" content="post" />
-        <meta property="fc:frame:button:1:target" content={`${HOST_URL}second-frame`} />
+        <meta property="fc:frame:button:1:action" content="post"/>
+        <meta property="fc:frame:button:1:target" content={`${HOST_URL}second-frame`}/>
       </Head>
 
       <h1>Sivar Volcano</h1>
