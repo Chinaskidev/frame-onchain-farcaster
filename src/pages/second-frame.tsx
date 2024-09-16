@@ -15,7 +15,7 @@ export default function SecondFrame() {
         <meta name="fc:frame:image:aspect_ratio" content="1:1" />
         {/* Botón para mint */}
         <meta property="fc:frame:button:1" content="Mint" />
-        <meta property="fc:frame:button:1:action" content="post" />
+        <meta property="fc:frame:button:1:action" content="tx" />
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
       </Head>
     </>
