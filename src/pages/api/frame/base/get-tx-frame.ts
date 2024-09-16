@@ -32,7 +32,7 @@ export default async function handler(
           abi: erc721ContractABI,
           to: erc721ContractAddress,
           data: data,
-          value: "0.001"
+          value: "1000000000000000"
       }
     });
   } catch (error) {
