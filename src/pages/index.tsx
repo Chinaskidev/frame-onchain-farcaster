@@ -23,7 +23,7 @@ export default function Home() {
         {/* Primer botón para iniciar */}
         <meta property="fc:frame:button:1" content="Next" />
         <meta property="fc:frame:button:1:action" content="post" />
-        <meta property="fc:frame:button:1:target" content={`${HOST_URL}/second-frame`} />
+        <meta property="fc:frame:button:1:target" content={`${HOST_URL}second-frame`} />
       </Head>
 
       <h1>Sivar Volcano</h1>
