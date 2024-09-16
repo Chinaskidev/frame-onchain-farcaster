@@ -24,14 +24,10 @@ export default function Home() {
         <meta property="fc:frame:button:1" content="Start" />
         <meta property="fc:frame:button:1:action" content="link" />
         <meta property="fc:frame:button:1:target" content={`${HOST_URL}/second-frame`} />
-        
-        {/* Segundo botón para mintear */}
-        <meta property="fc:frame:button:2" content="Mint" />
-        <meta property="fc:frame:button:2:action" content="post" />
-        <meta property="fc:frame:button:2:target" content={`${HOST_URL}/api/frame/base/get-tx-frame`} />
       </Head>
 
       <h1>Sivar Volcano</h1>
+      <p>Welcome! Click "Start" and mint a beautiful Volcano</p>
     </>
   );
 }
