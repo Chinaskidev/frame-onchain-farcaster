@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@coinbase/onchainkit": "^0.31.0",
+    "@coinbase/onchainkit": "^0.31.6",
     "@thirdweb-dev/react": "^4.9.4",
     "@thirdweb-dev/sdk": "^4.0.99",
     "ethers": "^5.7.2",
     "next": "14.2.6",
     "react": "^18",
     "react-dom": "^18",
-    "thirdweb": "^5.48.2"
+    "thirdweb": "^5.64.2"
   },
   "devDependencies": {
     "@types/node": "^20",
